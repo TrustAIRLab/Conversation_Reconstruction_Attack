@@ -1,4 +1,5 @@
 # Conversation Reconstruction Attack
+![arXiv](https://img.shields.io/badge/arXiv-red.svg)
 ![EMNLP'24](https://img.shields.io/badge/EMNLP'24-f1b800)
 
 This is the official public repository of the paper [*Reconstruct Your Previous Conversations! Comprehensively Investigating Privacy Leakage Risks in Conversations with GPT Models*](https://arxiv.org/abs/2402.02987v2).  
