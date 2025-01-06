@@ -10,6 +10,7 @@ parser = argparse.ArgumentParser(description="Run the chat simulation script.")
 parser.add_argument("--num_tests", type=int, help="Number of test iterations")
 parser.add_argument("--num_rounds", type=int, help="Number of chat rounds per iteration")
 parser.add_argument("--filename", type=str, help="Path to the input JSON file")
+parser.add_argument("--output_dir", type=str, help="Dir path to save the output JSON file")
 parser.add_argument("--version", type=str, help="Target model version -- from OpenAI or Together AI")
 parser.add_argument("--model_provider", type=str, choices=["together_ai","open_ai"], default="open_ai", help="LLM provider, together_ai or open_ai")
 parser.add_argument("--attack", type=str, help="Attack setting description")
@@ -117,7 +118,7 @@ def main():
 
             pbar.update(1)  # Update the progress bar for each test iteration
             
-    output_dir = './results'
+    output_dir = './results' / args.output_dir
     if not os.path.exists(output_dir):
         os.makedirs(output_dir)
     
